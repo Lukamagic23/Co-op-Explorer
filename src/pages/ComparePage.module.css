@@ -1,0 +1,47 @@
+.picker {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.faculties {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.faculty {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.facultyName {
+  font-weight: var(--weight-bold);
+}
+
+.picker :global(.chip[aria-disabled='true']) {
+  cursor: not-allowed;
+  color: var(--color-muted);
+}
+
+.hint {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.suggest {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-sky);
+}
+
+.suggestList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-6);
+}

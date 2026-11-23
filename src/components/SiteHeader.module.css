@@ -1,0 +1,135 @@
+.header {
+  padding-top: var(--space-5);
+  border-bottom: var(--border-thin);
+  background: var(--color-surface);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  text-decoration: none;
+}
+
+.logo {
+  width: auto;
+  height: 3.5rem;
+}
+
+.divider {
+  width: 2px;
+  align-self: stretch;
+  background: var(--color-ink);
+}
+
+.title {
+  font-size: clamp(1.625rem, 1.2rem + 2vw, 2.75rem);
+  font-weight: var(--weight-heavy);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-3);
+  border: var(--border);
+  background: var(--color-surface);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.navRow {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+}
+
+.navRow[data-open='true'] {
+  display: flex;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.navLink {
+  display: block;
+  padding: var(--space-3) 0 var(--space-3) var(--space-4);
+  border-left: var(--underline-bar) solid transparent;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  text-decoration: none;
+}
+
+.navLink:hover {
+  border-left-color: var(--color-line);
+}
+
+.navLink[aria-current='page'] {
+  border-left-color: var(--color-ink);
+}
+
+.progress {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+@media (min-width: 48rem) {
+  .logo {
+    height: 4.5rem;
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  .navRow,
+  .navRow[data-open='true'] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+
+  .navList {
+    flex-direction: row;
+    gap: var(--space-6);
+  }
+
+  .navLink {
+    padding: var(--space-3) var(--space-1) var(--space-4);
+    border-left: 0;
+    border-bottom: var(--underline-bar) solid transparent;
+    font-size: var(--text-base);
+  }
+
+  .navLink:hover {
+    border-bottom-color: var(--color-line);
+  }
+
+  .navLink[aria-current='page'] {
+    border-bottom-color: var(--color-ink);
+  }
+}

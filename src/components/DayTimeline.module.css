@@ -1,0 +1,117 @@
+.list {
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.list::before {
+  content: '';
+  position: absolute;
+  top: var(--space-5);
+  bottom: var(--space-5);
+  left: calc(var(--space-3) + 6px);
+  width: 2px;
+  background: var(--color-ink);
+}
+
+.item {
+  position: relative;
+  border-bottom: var(--border-thin);
+}
+
+.itemHeading {
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: normal;
+  line-height: inherit;
+}
+
+.trigger {
+  display: grid;
+  grid-template-columns: auto 3.5rem minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: 3.5rem;
+  padding: var(--space-3);
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--duration) var(--ease);
+}
+
+.trigger:hover {
+  background: var(--color-subtle);
+}
+
+.trigger:focus-visible {
+  outline-offset: -3px;
+}
+
+.dot {
+  position: relative;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  border: var(--border);
+  background: var(--color-surface);
+  border-radius: 50%;
+}
+
+.item[data-active='true'] .dot {
+  background: var(--color-yellow);
+  transform: scale(1.25);
+}
+
+.item[data-active='true'] .trigger {
+  background: var(--color-subtle);
+}
+
+.time {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.title {
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  overflow-wrap: anywhere;
+}
+
+.flag {
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-ink);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.chevron {
+  transition: transform var(--duration) var(--ease);
+}
+
+.trigger[aria-expanded='true'] .chevron {
+  transform: rotate(180deg);
+}
+
+.inlinePanel {
+  padding: var(--space-2) var(--space-3) var(--space-5) calc(var(--space-3) + 14px + var(--space-3));
+}
+
+.wide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.sidePanel {
+  position: sticky;
+  top: calc(var(--header-offset) + var(--space-4));
+  padding: var(--space-6);
+  border: var(--border);
+}

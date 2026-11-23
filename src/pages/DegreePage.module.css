@@ -1,0 +1,280 @@
+.duration {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.tinted {
+  background: var(--color-sky);
+}
+
+.split {
+  display: grid;
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.stack :global(.section-title) {
+  margin-bottom: 0;
+}
+
+.sideImage {
+  width: 100%;
+  max-width: 26rem;
+  justify-self: center;
+}
+
+.sectionLead {
+  margin-bottom: var(--space-6);
+}
+
+.subhead {
+  font-size: var(--text-xl);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-3);
+}
+
+.fit {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-4);
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-left: 1.2em;
+}
+
+.bullets li::marker {
+  color: var(--color-muted);
+}
+
+.skillsHeading {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-5);
+}
+
+.skills {
+  list-style: none;
+  display: grid;
+  gap: var(--space-5);
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: var(--border);
+}
+
+.skillName {
+  font-weight: var(--weight-bold);
+  font-size: var(--text-lg);
+}
+
+.majors {
+  list-style: none;
+  display: grid;
+  gap: var(--space-6);
+}
+
+.major {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: var(--underline-bar) solid var(--color-ink);
+}
+
+.majorName {
+  font-size: var(--text-xl);
+  letter-spacing: -0.01em;
+}
+
+.dayHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.dayHead :global(.section-title) {
+  margin-bottom: 0;
+}
+
+.dayIntro {
+  display: grid;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.glance {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin: 0;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: var(--border);
+  align-self: start;
+}
+
+.glance dd {
+  margin: var(--space-1) 0 0;
+}
+
+.glanceValue {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-heavy);
+}
+
+.timeline {
+  padding: var(--space-4);
+  background: var(--color-surface);
+}
+
+.decisions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-top: var(--space-7);
+}
+
+.facts {
+  display: grid;
+  gap: var(--space-5) var(--space-7);
+  margin: 0;
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: var(--border);
+}
+
+.fact dd {
+  margin: 0;
+  font-size: var(--text-lg);
+}
+
+.tradeoffs {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 52rem;
+}
+
+.tradeoff {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: var(--space-4);
+}
+
+.tradeoffNumber {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+}
+
+.tradeoffTitle {
+  font-size: var(--text-xl);
+  letter-spacing: -0.01em;
+}
+
+.verify {
+  margin-top: var(--space-8);
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border-left: 4px solid var(--color-yellow);
+  max-width: 52rem;
+  font-size: var(--text-sm);
+}
+
+.similar {
+  list-style: none;
+  display: grid;
+  gap: var(--space-6);
+}
+
+.similarItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: var(--underline-bar) solid var(--color-ink);
+}
+
+.similarName {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-heavy);
+  letter-spacing: -0.01em;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+}
+
+.similarName:hover {
+  text-decoration-color: var(--color-yellow);
+}
+
+@media (max-width: 30rem) {
+  .glance {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .glance > div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+
+  .glance dd {
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 48rem) {
+  .split {
+    grid-template-columns: 1.4fr 1fr;
+  }
+
+  .fit,
+  .similar,
+  .skills,
+  .majors,
+  .facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeline {
+    padding: var(--space-6);
+  }
+}
+
+@media (min-width: 64rem) {
+  .similar,
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dayIntro {
+    grid-template-columns: 1.3fr 1fr;
+    align-items: end;
+  }
+}

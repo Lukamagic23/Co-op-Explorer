@@ -1,0 +1,78 @@
+.how {
+  padding-block: var(--space-7);
+  background: var(--color-ink);
+  color: var(--color-surface);
+}
+
+.howTitle {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-6);
+}
+
+.steps {
+  list-style: none;
+  display: grid;
+  gap: var(--space-6);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 2px solid var(--color-yellow);
+}
+
+.number {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-yellow);
+}
+
+.stepTitle {
+  font-size: var(--text-lg);
+  letter-spacing: -0.01em;
+}
+
+.stepBody {
+  font-size: var(--text-sm);
+  color: var(--color-line);
+}
+
+.split {
+  display: grid;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.splitText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.splitText :global(.section-title) {
+  margin-bottom: 0;
+}
+
+.splitImage {
+  max-width: 28rem;
+  width: 100%;
+  justify-self: center;
+}
+
+@media (min-width: 48rem) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+@media (min-width: 64rem) {
+  .steps {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,73 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: var(--space-6) var(--space-8);
+}
+
+.shape {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: min(48%, 46rem);
+  background: var(--color-sky);
+  clip-path: polygon(0 0, 62% 0, 100% 42%, 58% 100%, 0 86%);
+  z-index: -1;
+}
+
+.inner {
+  display: grid;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.title {
+  font-size: var(--text-4xl);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  max-width: 34rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+  margin-top: var(--space-2);
+}
+
+.image {
+  width: 100%;
+  max-width: 18rem;
+  justify-self: center;
+}
+
+@media (max-width: 47.99rem) {
+  .shape {
+    width: 85%;
+    height: 60%;
+  }
+}
+
+@media (min-width: 48rem) {
+  .inner {
+    grid-template-columns: 1.15fr 1fr;
+  }
+
+  .image {
+    max-width: 32rem;
+    justify-self: end;
+  }
+}

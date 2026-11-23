@@ -1,0 +1,41 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-surface);
+  border-bottom: var(--border-thin);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: var(--space-5);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.link {
+  display: block;
+  padding: var(--space-4) var(--space-1) calc(var(--space-4) - var(--underline-bar));
+  border-bottom: var(--underline-bar) solid transparent;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.link:hover {
+  border-bottom-color: var(--color-line);
+}
+
+.link[aria-current='location'] {
+  border-bottom-color: var(--color-ink);
+}
+
+.link:focus-visible {
+  outline-offset: -3px;
+}

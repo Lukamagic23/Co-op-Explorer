@@ -1,0 +1,36 @@
+.footer {
+  margin-top: var(--space-8);
+  padding-block: var(--space-7);
+  background: var(--color-ink);
+  color: var(--color-surface);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-6);
+  font-weight: var(--weight-bold);
+}
+
+.links a {
+  text-underline-offset: 4px;
+}
+
+.links a:focus-visible {
+  outline-color: var(--color-yellow);
+}
+
+.note {
+  max-width: 48rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: var(--leading-body);
+  color: var(--color-line);
+}
