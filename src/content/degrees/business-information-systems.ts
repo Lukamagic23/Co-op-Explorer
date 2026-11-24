@@ -1,10 +1,9 @@
 import type { Degree } from '../schema';
 import campusPhoto from '../../assets/photos/degrees/business-information-systems-campus.jpg';
 import ampLogo from '../../assets/logos/amp.png';
-import arnottsLogo from '../../assets/logos/arnotts.png';
+import boqLogo from '../../assets/logos/boq.png';
+import elJannahLogo from '../../assets/logos/el-jannah.png';
 import eyLogo from '../../assets/logos/ey.png';
-import ingLogo from '../../assets/logos/ing.png';
-import kearneyLogo from '../../assets/logos/kearney.png';
 import pwcLogo from '../../assets/logos/pwc.png';
 import rbaLogo from '../../assets/logos/rba.png';
 import westpacLogo from '../../assets/logos/westpac.png';
@@ -240,13 +239,12 @@ const degree: Degree = {
   },
   employers: [
     { name: 'Westpac', logo: westpacLogo, type: 'Major bank', whatYouMightDo: 'Write requirements for changes to lending or payments systems.' },
-    { name: 'ING', logo: ingLogo, type: 'Digital bank', whatYouMightDo: 'Analyse customer data and support changes to digital banking products.' },
+    { name: 'Bank of Queensland', logo: boqLogo, type: 'Regional bank', whatYouMightDo: 'Help map and improve the processes behind lending and everyday banking.' },
     { name: 'AMP', logo: ampLogo, type: 'Wealth and superannuation', whatYouMightDo: 'Map processes in wealth and super operations and find where they slow down.' },
     { name: 'Reserve Bank of Australia', logo: rbaLogo, type: 'Central bank', whatYouMightDo: 'Support data and technology projects behind the bank\'s systems.' },
     { name: 'PwC', logo: pwcLogo, type: 'Professional services', whatYouMightDo: 'Help consulting teams map client processes and draft recommendations.' },
     { name: 'EY', logo: eyLogo, type: 'Professional services', whatYouMightDo: 'Support technology consulting or technology risk work for clients.' },
-    { name: 'Kearney', logo: kearneyLogo, type: 'Management consulting', whatYouMightDo: 'Research and analysis for strategy and operations projects.' },
-    { name: "Arnott's Group", logo: arnottsLogo, type: 'Consumer goods', whatYouMightDo: 'Improve the systems and data behind supply chain and sales.' },
+    { name: 'El Jannah', logo: elJannahLogo, type: 'Restaurant chain', whatYouMightDo: 'Improve the ordering, point-of-sale and store data systems behind a growing chain.' },
   ],
   tradeOffs: [
     {
@@ -284,7 +282,7 @@ const degree: Degree = {
     'Major and stream names, and which courses belong to each',
     'Course names for each year',
     'Number, length and timing of industry placements',
-    'Current co-op sponsors shown in the employer grid, and permission to display their logos',
+    'Employers in the grid are potential sponsors: confirm sponsorship and permission to display their logos',
   ],
 };
 
